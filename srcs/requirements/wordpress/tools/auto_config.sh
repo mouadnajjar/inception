@@ -2,12 +2,12 @@
 set -e
 
 echo "WordPress: Waiting for MariaDB to start..."
-until mysqladmin -h mariadb -u "${MYSQL_USER}" -p"${MYSQL_PASSWORD}" ping >/dev/null 2>&1; do
+until mysql -h mariadb -u "${SQL_USER}" -p"${SQL_PASSWORD}" -e "SELECT 1;" >/dev/null 2>&1; do
     sleep 2
 done
 echo "WordPress: MariaDB is up and running!"
 
-if [! -f "/var/www/html/wp-config.php" ]; then
+if [ ! -f "/var/www/html/wp-config.php" ]; then
     echo "WordPress: Commencing fresh installation..."
 
     mkdir -p /var/www/html
@@ -21,9 +21,9 @@ if [! -f "/var/www/html/wp-config.php" ]; then
 
     # Create wp-config.php using the environment variables from your.env file
     wp config create \
-        --dbname="${MYSQL_DATABASE}" \
-        --dbuser="${MYSQL_USER}" \
-        --dbpass="${MYSQL_PASSWORD}" \
+        --dbname="${SQL_DATABASE}" \
+        --dbuser="${SQL_USER}" \
+        --dbpass="${SQL_PASSWORD}" \
         --dbhost="mariadb:3306" \
         --allow-root
 
