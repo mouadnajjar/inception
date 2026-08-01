@@ -49,6 +49,15 @@ else
     echo "WordPress: Already installed. Skipping setup..."
 fi
 
+#BONUS
+# ==============================================================================
+echo "WordPress: Setting up Redis Cache..."
+wp config set WP_REDIS_HOST "redis" --allow-root || echo "Redis: Failed to set host"
+wp config set WP_REDIS_PORT 6379 --raw --allow-root || echo "Redis: Failed to set port"
+wp plugin install redis-cache --activate --allow-root || echo "Redis: Plugin install failed"
+wp redis enable --allow-root || echo "Redis: Enable failed"
+# ==============================================================================
+
 chown -R www-data:www-data /var/www/html
 
 echo "WordPress: Starting PHP-FPM..."

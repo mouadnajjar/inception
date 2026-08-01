@@ -1,0 +1,29 @@
+#SYS/INFOS:
+--------------------------------------------------------------------------------------------------------------
+|docker version  -->	#Shows the current installed version of Docker.                                      |
+|docker info    	--> #Displays system-wide information (number of containers, images, storage driver).    |
+|docker events   -->	#Streams real-time events from the server (useful for debugging system-level issues).|
+--------------------------------------------------------------------------------------------------------------
+
+#DOCKER-COMPOSE:
+--------------------------------------------------------------------------------------------------------------
+|docker-compose up	    --> #Builds, (re)creates, starts, and attaches to containers.                        |
+|docker-compose up -d	--> #Starts the containers in the background (detached mode).                        |
+|docker-compose build	--> #Builds or rebuilds services (forces a re-read of Dockerfiles).                  |
+|docker-compose down	    --> #Stops containers and removes containers, networks, and images created by up.|
+|docker-compose down -v	--> #Stops everything and deletes all attached volumes (destroys data).              |
+|docker-compose ps	    --> #Lists all containers specifically managed by the current compose file.          |
+|docker-compose logs -f	--> #Follows the combined log output of every service in the compose file.           |
+--------------------------------------------------------------------------------------------------------------
+
+#CONTAINER-LIFECYCLE:
+--------------------------------------------------------------------------------------------------------------
+|docker ps	                --> #Lists all currently running containers.                                     |
+|docker ps -a	            --> #Lists all containers (both running and stopped).                            |
+|docker start <container>	--> #Starts one or more stopped containers.                                      |
+|docker stop <container>	    --> #Gracefully stops a running container.                                   |
+|docker restart <container>	--> #Stops and then immediately starts a container.                              |
+|docker kill <container>	    --> #Force-kills a container immediately (no graceful shutdown).             |
+|docker rm <container>	    --> #Deletes a stopped container.                                                |
+|docker rm -f <container>	--> #Force-deletes a running container.                                          |
+--------------------------------------------------------------------------------------------------------------

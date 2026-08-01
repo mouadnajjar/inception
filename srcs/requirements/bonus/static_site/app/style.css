@@ -1,0 +1,126 @@
+*{
+padding: 0%;
+margin: 0%;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+box-sizing: border-box;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+nav{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-top: 45px;
+ padding-left: 8%;
+ padding-right: 8%;
+}
+.logo{
+    color: white;
+    font-size: 45px;
+    letter-spacing: 1px;
+   cursor: pointer;
+}
+span{
+  color: yellow;  
+}
+nav ul li{
+   list-style-type: none;
+   display: inline-block;
+   padding: 10px 25px;
+
+}
+nav ul li a{
+   color: white;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+nav ul li a:hover{
+ color: yellow;
+}
+
+.btn{
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: .4s;
+}
+.btn:hover{
+    transform: scale(1.2);
+    background-color: rgb(255, 255, 255);
+}
+.content{
+  position: absolute;  
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+}
+#myname{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px ;
+}
+#mine{
+   color: white;
+   font-size: 25px ;
+   margin-bottom: 50px ;
+}
+#into{
+color: #fcfc;
+letter-spacing: 2px;
+font: size 20px; 
+}
+.newslatter form{
+    width: 380px;
+    max-width: 100% ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.BUR{
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: .4s;
+}
+.BUR:hover{
+    transform: scale(1.2);
+    background-color: rgb(255, 255, 255);
+    transition: .4s;
+}
+.abt{
+    background: url(back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#mytxt{
+    color: white;
+    margin: 3%;
+    }
+#btxt{
+    color: yellow;
+}
+#texto{
+    color: white;
+}
+#cnt{
+    color: yellow;
+}
+.myboxtxt{
+    text-align: center;
+    margin: 20%;
+    margin-top: 5%;
+}
