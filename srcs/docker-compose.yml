@@ -69,6 +69,14 @@ services:
     depends_on:
       - wordpress
     restart: always
+  irc:
+    container_name: irc_server
+    build:
+      context: ./requirements/bonus/irc
+      dockerfile: Dockerfile
+    networks:
+      - inception_network
+    restart: always
 
 volumes:
   mariadb_data:
