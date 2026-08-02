@@ -1,3 +1,22 @@
+networks:
+  inception_network:
+    driver: bridge
+
+volumes:
+  mariadb_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/monajjar/data/mariadb
+  wordpress_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/monajjar/data/wordpress
+
+
 services:
   mariadb:
     container_name: mariadb
@@ -78,20 +97,3 @@ services:
       - inception_network
     restart: always
 
-volumes:
-  mariadb_data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/monajjar/data/mariadb
-  wordpress_data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/monajjar/data/wordpress
-
-networks:
-  inception_network:
-    driver: bridge
